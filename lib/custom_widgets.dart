@@ -39,7 +39,7 @@ class CustomCards extends StatelessWidget {
       height: 80,
       width: 160,
       child: Padding(
-        padding: const EdgeInsets.all(9),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -88,90 +88,114 @@ class CustomElevatedButton extends StatelessWidget {
 }
 
 class DisplayTile extends StatelessWidget {
-  String? imageLink;
-  String? orderId;
-  String? amount;
-  String? dateNtime;
+  String orderId;
+  String timeNdate;
+  String amount;
+  String imageLink;
   DisplayTile(
       {Key? key,
       required this.imageLink,
-      this.orderId,
-      this.amount,
-      this.dateNtime})
+      required this.orderId,
+      required this.amount,
+      required this.timeNdate})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 400,
-      height: 115,
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 18),
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      height: 85,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(width: .6, color: Colors.grey))),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 8, left: 3),
+                  padding: const EdgeInsets.only(left: 14, top: 5),
                   child: Card(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
-                      child: Image.asset('$imageLink',
-                          width: 50, height: 50, fit: BoxFit.fill),
+                      child: Image.asset(
+                        '$imageLink',
+                        width: 50,
+                        height: 50,
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15, left: 5),
-                  child: Text(
-                    orderId!,
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                  ),
+                SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 14,
+                    ),
+                    Text(
+                      "Order #$orderId",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      timeNdate,
+                      style: TextStyle(color: Colors.grey[600]),
+                    )
+                  ],
                 ),
                 SizedBox(
-                  width: 83,
+                  width: 55,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15, left: 5),
-                  child: Text(
-                    amount!,
-                    style: TextStyle(color: Colors.blue),
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Text(
+                      "₹$amount",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16),
+                    ),
+                    SizedBox(
+                      height: 3,
+                    ),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.green,
+                          radius: 5,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text("Successful")
+                      ],
+                    )
+                  ],
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 70),
-                  child: Text(dateNtime!),
-                ),
-                SizedBox(
-                  width: 70,
-                ),
-                CircleAvatar(
-                  backgroundColor: Colors.green,
-                  radius: 5,
-                ),
-                SizedBox(
-                  width: 4,
-                ),
-                Text('Successful')
-              ],
+            SizedBox(
+              height: 2,
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text("$amount deposited to 58860200000135"),
-                ],
+              padding: const EdgeInsets.only(left: 18),
+              child: Text(
+                "₹$amount depostied to 588602000000138",
+                style: TextStyle(fontSize: 10, color: Colors.grey[800]),
               ),
-            ),
+            )
           ],
         ),
       ),

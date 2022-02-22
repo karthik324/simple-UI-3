@@ -143,7 +143,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 8),
+                    padding: const EdgeInsets.only(left: 19, top: 8),
                     child: Row(
                       children: [
                         CustomElevatedButton(
@@ -162,51 +162,81 @@ class MyApp extends StatelessWidget {
                   ),
                   DisplayTile(
                     imageLink: 'assets/images/image1.jpg',
-                    orderId: 'Order #1688068',
-                    amount: '₹799',
-                    dateNtime: 'Jul 12, 02:06 PM',
-                  ),
-                  const Divider(
-                    thickness: 2,
-                    indent: 25,
-                    endIndent: 20,
-                    color:
-                        Colors.grey, // The color to use when painting the line.
-                    height: 20, // The divider's height extent.
+                    orderId: '1688068',
+                    amount: '799',
+                    timeNdate: 'Jul 12, 02:06 PM',
                   ),
                   DisplayTile(
                     imageLink: 'assets/images/image2.jpg',
-                    orderId: 'Order #1457741',
-                    amount: '₹397.4',
-                    dateNtime: 'Apr 26, 07:47 AM',
-                  ),
-                  const Divider(
-                    thickness: 2,
-                    indent: 25,
-                    endIndent: 20,
-                    color:
-                        Colors.grey, // The color to use when painting the line.
-                    height: 20, // The divider's height extent.
+                    orderId: '1457741',
+                    amount: '397.4',
+                    timeNdate: 'Apr 26, 07:47 AM',
                   ),
                   DisplayTile(
                     imageLink: 'assets/images/image3.jpg',
-                    orderId: 'Order #1408896',
-                    amount: '₹686.42',
-                    dateNtime: 'Apr 11, 10:54 AM',
-                  ),
-                  const Divider(
-                    thickness: 2,
-                    indent: 25,
-                    endIndent: 20,
-                    color:
-                        Colors.grey, // The color to use when painting the line.
-                    height: 20, // The divider's height extent.
+                    orderId: '1408896',
+                    amount: '686.42',
+                    timeNdate: 'Apr 11, 10:54 AM',
                   ),
                   DisplayTile(
                     imageLink: 'assets/images/image4.jpeg',
-                    orderId: 'Order #1369633',
-                    amount: '₹1123.5',
-                    dateNtime: 'Apr 2, 11:29 AM',
+                    orderId: '1369633',
+                    amount: '1123.5',
+                    timeNdate: 'Apr 2, 11:29 AM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image5.jpg',
+                    orderId: '1370125',
+                    amount: '1722.75',
+                    timeNdate: 'Apr 2, 11:29 AM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image6.jpg',
+                    orderId: '1370568',
+                    amount: '884.17',
+                    timeNdate: 'Apr 1, 11:19 AM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image4.jpeg',
+                    orderId: '1359971',
+                    amount: '599.25',
+                    timeNdate: 'Apr 1, 11:19 AM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image7.jpg',
+                    orderId: '1176731',
+                    amount: '524.25',
+                    timeNdate: 'Feb 21, 01:25 PM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image8.jpg',
+                    orderId: '1174245',
+                    amount: '699',
+                    timeNdate: 'Feb 21, 10:21 AM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image9.jpeg',
+                    orderId: '1177731',
+                    amount: '1123.5',
+                    timeNdate: 'Feb 20, 09:54 AM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image4.jpeg',
+                    orderId: '1174282',
+                    amount: '799',
+                    timeNdate: 'Feb 19, 10:47 AM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image5.jpg',
+                    orderId: '1370125',
+                    amount: '524.25',
+                    timeNdate: 'Feb 18, 12:08 PM',
+                  ),
+                  DisplayTile(
+                    imageLink: 'assets/images/image6.jpg',
+                    orderId: '1164892',
+                    amount: '524.25',
+                    timeNdate: 'Feb 13, 07:57 AM',
                   ),
                 ],
               ),
